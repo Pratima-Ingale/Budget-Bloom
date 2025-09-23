@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(25deg , #daddf4 20%,rgb(158, 214, 236) 30%, #7cacdc 50%,rgb(81, 81, 203));
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: linear-gradient(25deg , #daddf4 20%,rgb(158, 214, 236) 30%, #7cacdc 50%,rgb(81, 81, 203));
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 4px 8px rgb(36, 16, 124);
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.transaction-table {
+  box-shadow: 5px 5px 8px rgb(40, 7, 110);
+  width: 100%;
+  border-collapse: collapse;
+}
+.transaction-table th, .transaction-table td {
+  padding: 12px;
+  text-align: left;
+}
+  /* first column = Date */
+.transaction-table th:nth-child(1) {
+    min-width: 120px;  /* Adjust as needed */
+}
+.transaction-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+.RButton{
+  background-color: rgb(22, 22, 196);
+  color: #f1f1f1;
+}

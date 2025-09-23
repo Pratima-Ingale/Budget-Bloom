@@ -1,0 +1,22 @@
+{% extends 'SideNavbar.html'%}
+
+{% block title %}Line Graph{% endblock %}
+
+{% block head %}
+    <link href="{{ url_for('static',filename='css/lineGraph.css') }}" rel="stylesheet" >
+{%endblock%}
+
+{%block content%}
+    <div class="ExpenseSummary">
+          <h2 id="title">EXPENSE SUMMARY</h2>
+          <div id="GraphInfo">
+             <h3> Total Expense </h3>
+             <h3 style="color: rgb(110, 21, 29);"> ₹ 0.00</h3>
+          </div>
+          <canvas id="ExpenseChart"></canvas>
+    </div>
+    <br>
+    <button id="clearAll">CLEAR ALL EXPENSES</button>
+    <br>
+
+{%endblock%}

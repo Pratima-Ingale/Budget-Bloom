@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="{{ url_for('static',filename='css/homePage.css') }}" rel="stylesheet" >
+    <title>Homepage</title>
+</head>
+<body>
+    <div class="drawing">
+        <img src="{{ url_for('static', filename='images/piggi image.webp') }}" alt="My Image" >
+        <h3 id="secondHeading">Let your budget grow wisely.....</h3>
+    </div>
+    <div class="textPart">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li class="active">
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/add">Add</a>
+                    </li>
+                    <li>
+                        <a href="/recent">Recent</a>
+                    </li>
+                    <li>
+                        <a href="/Glance">Glance</a>
+                    </li>
+                    <li>
+                        <a href="/dateSheet">Analytics</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="title">
+           <h3 id="firstHeading">Smart Spending Starts Here</h3>
+           <h1 id="heading">Budget Bloom</h1>
+        </div>
+    </div>
+   <script src="{{ url_for('static',filename='js/ExpenceTracker.js') }}"></script>
+</body>
+</html>

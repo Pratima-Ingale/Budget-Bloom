@@ -1,0 +1,15 @@
+{% extends 'SideNavbar.html'%}
+
+{%block title %}Glance Look{%endblock%}
+
+{%block head%}
+    <link href="{{ url_for('static',filename='css/pieChart.css') }}" rel="stylesheet" >
+{%endblock%}
+
+{%block content%}
+    <div class="CategoryGraph">
+        <h2>Expense by Category</h2>
+        <canvas id="categoryChart"></canvas>
+    </div>
+
+{%endblock%}

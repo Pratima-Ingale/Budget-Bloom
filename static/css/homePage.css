@@ -1,0 +1,90 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    width: 100vw;
+    overflow: hidden; /* Prevents any scrolling */
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(25deg , #daddf4 20%,rgb(158, 214, 236) 30%, #7cacdc 50%,rgb(81, 81, 203));
+    position: relative;
+}
+.drawing{
+    display: flex;
+    width: 50%;
+    height: 80vh;
+    padding-left: 40px;
+    padding-top: 30px;
+    position: relative;
+    flex-direction: column;   /* Add the second heading to lower to the image */
+}
+.textPart{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav{
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+}
+.title {
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  padding-left: 100px;
+  text-shadow: 7px 7px 7px whitesmoke;
+  color: rgb(9, 9, 57);
+}
+#secondHeading{
+  font-size: 40px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  color: rgb(15, 15, 88);
+  text-shadow: 2px 2px 2px rgb(10, 41, 56);
+}
+#firstHeading{
+  display: flex;
+  font-size: 40px;
+  color: rgb(20, 20, 92);
+  text-shadow: 4px 4px 4px rgb(162, 208, 230);
+}
+#heading{
+  margin-top: 0px;
+}
+.navbar{
+  margin-top: 10%;
+  background-color: #3982cb;
+  padding: 1rem;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  border: 2px solid rgb(31, 31, 134);
+  box-shadow: 5px 5px 5px rgb(40, 40, 174);
+}
+.navbar ul {
+  list-style: none;         /* remove bullet points */
+  display: flex;            /* make <li> elements line up horizontally */
+  justify-content: space-around;  /* or use space-between/center */
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.navbar li a {
+  text-decoration: none;     /* Removes the underline from links */
+  color: rgb(9, 9, 53);    /* Sets the text color of links to blue */
+  font-weight: 700;          /* Makes the link text bold */
+  font-size: 25px;
+  padding: 10px;
+  margin:10px ;
+  border-radius: 30px;
+}
+.navbar li a:hover {
+  color: rgb(214, 217, 236);
+  text-shadow: 0 0 20px rgb(129, 193, 235);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+
+

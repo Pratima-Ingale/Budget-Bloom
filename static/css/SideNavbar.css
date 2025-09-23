@@ -1,0 +1,47 @@
+.sidebar {
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  text-align: center;
+  left: -250px;
+  top: 0;
+  background-color: #5a5ab0;
+  padding-top: 60px;
+  transition: 0.3s;
+  overflow-x: hidden;
+  z-index: 1000;
+}
+#navTitle{
+  font-size: 30px;
+  text-shadow: 2px 2px 4px whitesmoke;
+  color: rgb(9, 9, 57);
+}
+/* Sidebar active (visible) */
+#sidebar.active {
+    left: 0;
+}
+
+.navCont {
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #5bb9e7;
+}
+
+.toggle-btn {
+  position: fixed;  /* Keeps it fixed on screen */
+  top: 10px;        /* Distance from the top */
+  left: 10px;       /* Distance from the left */
+  z-index: 1100;    /* Make sure it stays above other elements */
+  background-color: #3757d7; /* Button background color */
+  color: white;     /* Button text color */
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}

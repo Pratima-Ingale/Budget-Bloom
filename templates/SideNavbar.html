@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title%}{%endblock%}</title>
+  <link href="{{ url_for('static',filename='css/SideNavbar.css') }}" rel="stylesheet" >
+  {% block head%}{% endblock %}
+</head>
+<body>
+  <div id="sidebar" class="sidebar">
+    <h2 id="navTitle">Menu</h2>
+    <a class="navCont"  href="/">Home</a>
+    <a class="navCont" href="/add">Add Expense</a>
+    <a class="navCont" href="/recent">Recent Expense</a>
+    <a class="navCont" href="/Glance">Glance Look</a>
+    <a class="navCont"href="/dateSheet">Analytics</a>
+  </div>
+    <button  class="toggle-btn">☰ </button>
+    {% block content%}
+    <h1>Welcome!</h1>
+    <p>This is the main content area.</p>
+    {% endblock%}
+  <script src="{{ url_for('static',filename='js/newJs.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

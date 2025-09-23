@@ -1,0 +1,60 @@
+{% extends 'SideNavbar.html'%}
+{%block head%}
+    <link href="{{ url_for('static',filename='css/add.css') }}" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+
+{% block title%} Add EXPENSES {% endblock%}
+
+{% block content %}
+
+    <p id="heading">Budget Bloom</p>
+    <h2 id="subHeading">Let your budget grow wisely</h2>
+    <div class="BasicBox">
+      <form method="POST" action="/edit/{{exp.DId}}">
+        <h1>Edit the Expense</h1>
+        <h3>Description of Spending</h3>
+        <input type="text" id="description" name="HDescription" value="{{exp.DDescription}}">
+        <h3>Amount (💰)</h3>
+        <input type="number" id="amount" name="HAmount" value="{{exp.DAmount}}">
+        <h3>Category</h3>
+        <div class="category_container" >
+           <div class="category" id="food"> 
+              <i class="fa-solid fa-utensils"></i>
+              <h4>Food</h4>
+           </div>
+           <div class="category" id="transport">
+              <i class="fa-solid fa-car-side"></i>
+              <h4>Transport</h4>
+           </div>
+           <div class="category" id="grocery">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <h4>Grocery</h4>
+           </div>
+           <div class="category" id="education">
+              <i class="fa-solid fa-user-graduate"></i>
+              <h4>Education</h4>
+           </div>
+           <div class="category" id="bills">
+              <i class="fa-solid fa-money-bill-transfer"></i>
+              <h4>Bills</h4>
+           </div>
+           <div class="category" id="entertainment">
+              <i class="fa-solid fa-video"></i>
+              <h4>Entertainment</h4>
+           </div>
+        </div>
+         <!-- Hidden input to store the selected category -->
+         <input type="hidden" name="HCategory" value="{{exp.DCategory}}"  id="selectedCategory">
+
+         
+        <br>
+        <h3>Date</h3>
+        <input id="date" type="date" value="{{exp.DDate}}" name="HDate">
+        <br><br>
+        <button id="submit" type="submit" >UPDATE EXPENSE</button>
+        <br><br>
+      </form>
+    </div>
+
+{% endblock%}

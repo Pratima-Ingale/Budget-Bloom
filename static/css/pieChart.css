@@ -1,0 +1,20 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    place-items: center ;
+    text-align: center;
+    background: linear-gradient(25deg , #daddf4 20%,rgb(158, 214, 236) 30%, #7cacdc 50%,rgb(81, 81, 203));
+}
+h2{
+    text-shadow: 5px 5px 5px rgb(144, 228, 234);
+    color: rgb(9, 9, 57);
+    font-size: 30px;
+}
+#categoryChart{
+    width:600px;
+    height:600px;
+}

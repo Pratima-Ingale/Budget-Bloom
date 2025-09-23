@@ -1,0 +1,77 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    place-items: center ;
+    text-align: center;
+    background: linear-gradient(25deg , #daddf4 20%,rgb(158, 214, 236) 30%, #7cacdc 50%,rgb(81, 81, 203));
+}
+
+.BasicBox {
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 41%;
+    text-align: center;
+    place-items: center ;
+    background: linear-gradient(25deg , #daddf4 20%,rgb(158, 214, 236) 30%, #7cacdc 50%,rgb(81, 81, 203));
+    box-shadow: 10px 10px 15px rgb(29, 24, 98);
+    color: rgb(23, 7, 43);
+}
+.category_container {
+    display: flex;
+    align-items: center ;
+    gap: 40px ;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+#heading {
+    margin: 10px;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px rgb(144, 228, 234);
+    color: rgb(9, 9, 57);
+}
+#subHeading{
+    color: rgb(3, 3, 175);
+    margin: 7px;
+}
+.category{
+    border : 2px solid rgb(244, 242, 242) ;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(2, 3, 24);
+}
+.category:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    background-color: rgb(123, 216, 247);
+}
+i{
+    color: bisque;
+    font-size: 30px;
+    margin-top: 10px;
+}
+h4{
+    color: #1a2355;
+}
+#submit{
+    background-color: #3418a3;
+    padding: 10px 10px ;
+    margin: 10px;
+    color: rgb(197, 236, 248);
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: cursive;
+    box-shadow: 5px 5px 14px rgb(101, 96, 237);
+}
+.BasicBox h3 {
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(10, 10, 68);
+    text-shadow: 3px 3px 3px rgb(67, 69, 107);
+}

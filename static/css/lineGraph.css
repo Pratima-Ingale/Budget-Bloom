@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    background: linear-gradient(25deg , #daddf4 20%,rgb(158, 214, 236) 30%, #7cacdc 50%,rgb(81, 81, 203));
+    justify-content: center;  /* Horizontal */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    flex-direction: column; 
+    overflow: hidden; /* Prevents any scrolling */
+}
+#GraphInfo{
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.ExpenseSummary{
+    color: rgb(13, 7, 83);
+    box-shadow: 8px 8px 12px rgb(21, 6, 57);
+    background: linear-gradient(25deg , #daddf4 20%,rgb(158, 214, 236) 30%, #7cacdc 50%,rgb(81, 81, 203));
+    border: 1px solid rgb(57, 57, 214);
+    border-radius: 10px;
+    margin: 15px;
+    padding: 5px;
+    width: 60%;
+    height: 83vh;
+    text-align: center;
+}
+h2{
+    font-size: 30px;
+    text-shadow: 2px 2px 4px whitesmoke;
+    color: rgb(9, 9, 57);
+}
+#clearAll{
+    background-color: rgb(49, 16, 79);
+    color: #eef;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+}
