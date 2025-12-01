@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add expense
     if (submitBtn) {
         submitBtn.addEventListener('click', (e) => {
-            e.preventDefault();
             const description = descriptionInput.value.trim();
             const amount = parseFloat(amountInput.value);
             const date = dateInput.value;
@@ -44,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             hiddenCategoryInput.value = selectedCategory;
             console.log("Submitting form with data:", { description, amount, category: selectedCategory, date });
-            document.querySelector("form").submit();
         });
     } else {
         console.error("submitBtn not found in HTML!");
