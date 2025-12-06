@@ -2,11 +2,15 @@ from flask import Flask,render_template,request,redirect,flash,jsonify
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from sqlalchemy import func,desc  # For aggregation
+import pymysql
+pymysql.install_as_MySQLdb()
 
 
 app = Flask(__name__)
 app.secret_key = "my_super_secret_key"
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:@localhost:3307/BB'
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://Pratima7517:Chakuli%243065@Pratima7517.mysql.pythonanywhere-services.com/Pratima7517$Pratima7517-BB'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
@@ -16,7 +20,7 @@ class ExpInfo(db.Model):
     DId = db.Column(db.Integer, primary_key=True)  # <-- primary key
     DDescription = db.Column(db.String(50),nullable=False)
     DAmount = db.Column(db.Integer,nullable=False)
-    DCategory = db.Column(db.String,nullable=False)
+    DCategory = db.Column(db.String(50),nullable=False)
     DDate = db.Column(db.Date,nullable=False)
 
 
@@ -39,11 +43,11 @@ def Add():
             # handle empty input
             flash("Amount cannot be empty")
             return redirect('/add')
-            
+
         PAmount = int(PAmount)
         PDate = datetime.strptime(PDate, "%Y-%m-%d").date()
 
-        
+
         entry = ExpInfo(DDescription = PDescription,DAmount = PAmount,DCategory = PCategory,DDate = PDate)
         db.session.add(entry)
         db.session.commit()
@@ -82,7 +86,7 @@ def delete(DId):
         db.session.delete(exp)
         db.session.commit()
     return redirect(f'/recent')
-    
+
 
 @app.route("/Glance")
 def glance():
